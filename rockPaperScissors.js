@@ -1,3 +1,4 @@
+  
   let userScore = 0;
   let computerScore = 0;
   let targetScore = 5
@@ -36,11 +37,9 @@ function convertToWord(letter){ //this function converts letters to
      result_p.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}`
      if (userScore === targetScore) {
      alert("You win!");
-
-     resetGame();
-
+     resetGame()
     } else{
-        return
+        return false
     }//else if (userScore > targetScore) {
     //      alert("Final User Score: " + userScore + ". You busted! Try again!");
     //      lose()
@@ -66,10 +65,11 @@ function lose(userChoice, computerChoice){
     
     if (computerScore === targetScore) {
     alert("You lose!");
-    
-    resetGame();
+    resetGame()
+    } else {
+         return false
 
-    }
+     }
     //     if(userScore = 10){
 //         //console.log('computer wins!! this round :(')//how do I make it appear this round
 //         result_p.innerHTML = "computer wins!! this round :("
@@ -81,13 +81,14 @@ function draw(userChoice, computerChoice){
     
     
     // computerScore++;
-    userScore_span.innerHTML = userScore 
-    computerScore_span.innerHTML = computerScore
+    //userScore_span.innerHTML = userScore 
+    //computerScore_span.innerHTML = computerScore
     result_p.innerHTML = `${convertToWord(userChoice)} equals ${convertToWord(computerChoice)}. It's a Draw`
     if (computerScore && userScore === targetScore) {
     alert("It's a Draw!");
-    
     resetGame()
+    } else {
+         return false
     }
     //  if(userScore <= 10){
     //     //console.log('user wins, this round')
@@ -158,11 +159,13 @@ function main(){//has all the event listeners
 
     paper_div.addEventListener('click', function() {
         game("p")
+        
     })
         
 
     scissors_div.addEventListener('click', function() {
         game("s")
+        
     })
     
 }
