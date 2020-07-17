@@ -2,7 +2,7 @@
 
 ## Rock Paper Scissors game
 
-![](./images/demo.png)
+![](./img/demo.png)
 
 Technologies used:<br>
 Html, Javascript, jQuery, CSS
