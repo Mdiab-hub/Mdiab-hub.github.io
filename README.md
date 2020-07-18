@@ -5,7 +5,7 @@
 ![](./img/demo.png)
 
 Technologies used:<br>
-Html, Javascript, jQuery, CSS
+Html, Javascript, Vanilla Javascript, CSS
 
 Description: <br>
 Simple two player rock, paper, scissors game.
@@ -20,3 +20,6 @@ Simple two player rock, paper, scissors game.
 * display that will indicate winner
 * create function that resets score to zero each round
 * create round function and then let functions go through it--which functions; the win, lose, draw functions
+
+
+* gameoverfunction that tells the player whther the computer won or user won and then resets the game.
